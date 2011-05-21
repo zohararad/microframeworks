@@ -1,0 +1,10 @@
+!!! 5
+%head
+  %title Address Book
+%body
+  %ul
+    %li
+      %a{:href => url('/'), :title => 'Addresses'} Addresses
+    %li
+      %a{:href => url('/address/new'), :title => 'New Address'} New Address
+  = yield

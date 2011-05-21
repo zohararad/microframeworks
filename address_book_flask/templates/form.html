@@ -1,0 +1,21 @@
+<form action="{{ url_for('update_address', id=address._id) if address else url_for('create_address') }}" method="post">
+	<p>
+		<label for="firstname">First Name</label>
+		<input type="text" id="firstname", name="firstname" value="{{ address.firstname if address }}" />
+	</p>
+	<p>
+		<label for="lastname">Last Name</label>
+		<input type="text" id="lastname", name="lastname" value="{{ address.lastname if address }}" />
+	</p>
+	<p>
+		<label for="email">Email</label>
+		<input type="text" id="email", name="email" value="{{ address.email if address }}" />
+	</p>
+	<p>
+		<label for="website">Website</label>
+		<input type="text" id="website", name="website" value="{{ address.website if address }}" />
+	</p>
+	<p>
+		<input type="submit" value="Save" />
+	</p>
+</form>

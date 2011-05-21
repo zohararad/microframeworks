@@ -1,0 +1,14 @@
+%h1 Address Book
+- unless @addresses.blank?
+	%h3 Current Addresses
+	%ul
+		- @addresses.each do |addr|
+			%li
+				%strong= "%s %s: " % [addr.firstname,addr.lastname]
+				%a{:href => addr.website, :title => 'Visit Website'} Visit Website
+				&nbsp;|&nbsp;
+				%a{:href => ("mailto:%s" % addr.email), :title => 'Send Email'} Send Email
+				&nbsp;|&nbsp;
+				%a{:href => url('/address/%s/edit' % addr.id), :title => 'Edit'} Edit
+				&nbsp;|&nbsp;
+				%a{:href => url('/address/%s/delete' % addr.id), :title => 'Delete'} Delete

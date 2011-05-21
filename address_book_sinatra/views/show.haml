@@ -1,0 +1,9 @@
+%h1= "%s %s's Details:" % [@address.firstname,@address.lastname]
+%p
+	%strong Email: 
+	= @address.email
+%p
+	%strong Website: 
+	= @address.website
+%p
+	%a{:href => '/address/%s/edit' % @address.id, :title => 'Edit'} Edit

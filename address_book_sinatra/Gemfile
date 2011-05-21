@@ -1,0 +1,8 @@
+source 'http://rubygems.org'
+
+gem 'sinatra'
+gem 'bson_ext'
+gem 'mongo_ext'
+gem 'mongoid'
+
+gem 'haml'

@@ -1,0 +1,10 @@
+<h1>{{address.firstname}} {{address.lastname}}'s Details:</h1>
+<p>
+	<strong>Email:</strong> {{address.email}}
+</p>
+<p>
+	<strong>Website: </strong> {{address.website}}
+</p>
+<p>
+	<a href="{{ url_for('edit_address', id=address._id)}}" title="Edit">Edit</a>
+</p>

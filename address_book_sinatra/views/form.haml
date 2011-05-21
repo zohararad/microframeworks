@@ -1,0 +1,15 @@
+%form{:method => 'post', :action => @form_url}
+	%p
+		%label{:for => 'firstname'} First Name
+		%input#firstname{:type => 'text', :name => 'address[firstname]', :value => @address.firstname}
+	%p
+		%label{:for => 'lastname'} Last Name
+		%input#lastname{:type => 'text', :name => 'address[lastname]', :value => @address.lastname}
+	%p
+		%label{:for => 'email'} Email
+		%input#email{:type => 'text', :name => 'address[email]', :value => @address.email}
+	%p
+		%label{:for => 'website'} Website
+		%input#website{:type => 'text', :name => 'address[website]', :value => @address.website}
+	%p
+		%input{:type => 'Submit', :value => 'Save'}

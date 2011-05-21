@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+	<h1>Addresses</h1>
+	{% if addresses.count() > 0 %}
+	<ul>
+		{% for addr in addresses %}
+		<li>
+			<strong>{{addr.firstname}} {{addr.lastname}}: </strong>
+			<a href="{{addr.website}}" title="Visit Website">Visit Website</a>
+			&nbsp;|&nbsp;
+			<a href="mailto:{{addr.email}}" title="Send Email">Send Email</a>
+			&nbsp;|&nbsp;
+			<a href="{{ url_for('edit_address', id=addr._id)}}" title="Edit Address">Edit Address</a>
+			&nbsp;|&nbsp;
+			<a href="{{ url_for('delete_address', id=addr._id)}}" title="Delete Address">Delete Address</a>
+		</li>
+		{% endfor %}
+	</ul>
+	{% endif %}
+{% endblock %}
